@@ -6,5 +6,6 @@ admin.site.register(TipoUsuario)
 admin.site.register(Disciplina)
 admin.site.register(Professor)
 admin.site.register(Aluno)
-admin.site.register(Horario)
+admin.site.register(Banca)
+admin.site.register(Grade)
 
