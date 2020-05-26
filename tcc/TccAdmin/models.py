@@ -26,13 +26,5 @@ class Aluno(models.Model):
 class Banca(models.Model):
     horario = Horario
     aluno = models.ForeignKey(Aluno, on_delete=models.CASCADE)
-    professor = models.ForeignKey(Professor, on_delete=models.CASCADE)
+    professor = models.ForeignKey(Professor, none=True, blank=True, on_delete=models.CASCADE)
     disciplina = models.ForeignKey(Disciplina, on_delete=models.CASCADE)
-
-class Grade(models.Model):
-    h1 = models.ForeignKey(Horario,on_delete=models.CASCADE)
-    h2 = models.ForeignKey(Horario,on_delete=models.CASCADE)
-    h3 = models.ForeignKey(Horario,on_delete=models.CASCADE) 
-    h4 = models.ForeignKey(Horario,on_delete=models.CASCADE)
-    h5 = models.ForeignKey(Horario,on_delete=models.CASCADE)
-    h6 = models.ForeignKey(Horario,on_delete=models.CASCADE)
