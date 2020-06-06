@@ -26,5 +26,8 @@ class Aluno(models.Model):
 class Banca(models.Model):
     horario = Horario
     aluno = models.ForeignKey(Aluno, on_delete=models.CASCADE)
-    professor = models.ForeignKey(Professor, none=True, blank=True, on_delete=models.CASCADE)
+    professor = models.ForeignKey(Professor, null=True, blank=True, on_delete=models.CASCADE)
     disciplina = models.ForeignKey(Disciplina, on_delete=models.CASCADE)
+
+class Grade(models.Model):
+    horarios = models.ManyToManyField(Horario)
